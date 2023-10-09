@@ -10,7 +10,7 @@
 
  The data concerns health, economic and demographic characteristics of counties in the US. The unit of analysis is the county. If you are interested in the data source it is [https://www.countyhealthrankings.org/](https://www.countyhealthrankings.org/). 
 
- I output a jupyter notebook FP_starter_ShashaWang.ipynb containing both the codes and the description of each step of the project. Its PDF and html version are also provided in [FP_starter_ShashaWang.pdf](https://github.com/wangshasha111/US_county_poor_health_prediction/blob/main/FP_data_dictionary.doc.pdf) and FP_starter_ShashaWang.slides.html
+ I output a jupyter notebook FP_starter_ShashaWang.ipynb containing both the codes and the description of each step of the project. Its PDF and html version are also provided in [FP_starter_ShashaWang.pdf](https://github.com/wangshasha111/US_county_poor_health_prediction/blob/main/FP_data_dictionary.doc.pdf) and [FP_starter_ShashaWang.slides.html](https://github.com/wangshasha111/US_county_poor_health_prediction/blob/main/FP_starter_ShashaWang.slides.html)
 
 
 

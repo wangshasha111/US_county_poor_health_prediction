@@ -1,4 +1,4 @@
-# US_county_poor_health_prediction
+# Using Python CART for Detecting the Most Predictive Factors of Health Index
 
 
 ## Motivation

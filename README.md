@@ -15,7 +15,7 @@
  It is considered a model-free approach. I use the ``sklearn" package of Python 3.8.3 to estimate and plot the CART trees. 
 
 ## Software
-I use python 3.8.3 with packages **pandas seaborn numpy matplotlib sklearn math patsy**.
+I use Python 3.8.3 with packages **pandas seaborn numpy matplotlib sklearn math patsy**.
 
 ## Takeaway
  The takeaway from the project is that the most predictive factors of a county's health index are, in order of significance, life expectancy, insufficient sleep, smoking and excessive drinking, adult obesity, and the percentage of females.

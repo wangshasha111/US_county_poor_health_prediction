@@ -1,64 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta charset="utf-8" />
 
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-
-<title>FP_starter_ShashaWang slides</title>
+<title>FP_starter_ShashaWang</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -13072,133 +13021,59 @@ ul.typeahead-list  > li > a.pull-right {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13209,7 +13084,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13222,8 +13097,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -13298,21 +13172,20 @@ None
 </div>
 
 </div>
-</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-1---Choose-the-y-variable:-Poor.Health">Step 1 - Choose the y-variable: Poor.Health<a class="anchor-link" href="#Step-1---Choose-the-y-variable:-Poor.Health">&#182;</a></h3><h3 id="Step-2---Browse-the-dataset">Step 2 - Browse the dataset<a class="anchor-link" href="#Step-2---Browse-the-dataset">&#182;</a></h3><h3 id="Step-3---Ask-the-question">Step 3 - Ask the question<a class="anchor-link" href="#Step-3---Ask-the-question">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-1---Choose-the-y-variable:-Poor.Health">Step 1 - Choose the y-variable: Poor.Health<a class="anchor-link" href="#Step-1---Choose-the-y-variable:-Poor.Health">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
@@ -13349,14 +13222,14 @@ None
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-1---Choose-the-y-variable:-Poor.Health">Step 1 - Choose the y-variable: Poor.Health<a class="anchor-link" href="#Step-1---Choose-the-y-variable:-Poor.Health">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -13396,14 +13269,14 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-1---Choose-the-y-variable:-Poor.Health">Step 1 - Choose the y-variable: Poor.Health<a class="anchor-link" href="#Step-1---Choose-the-y-variable:-Poor.Health">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -13441,14 +13314,14 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-2---Browse-the-dataset">Step 2 - Browse the dataset<a class="anchor-link" href="#Step-2---Browse-the-dataset">&#182;</a></h3><h4 id="See-all-the-columns'-names">See all the columns' names<a class="anchor-link" href="#See-all-the-columns'-names">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[273]:</div>
@@ -13489,7 +13362,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13499,8 +13372,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[274]:</div>
@@ -13517,7 +13389,6 @@ Name: Poor.Health, dtype: float64
 </div>
 
 </div>
-</aside><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[275]:</div>
@@ -13554,7 +13425,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13565,7 +13436,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[276]:</div>
@@ -13602,7 +13473,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13615,7 +13486,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[277]:</div>
@@ -13659,7 +13530,55 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Define-the-research-subject">Define the research subject<a class="anchor-link" href="#Define-the-research-subject">&#182;</a></h2><h3 id="Step-2---Browse-the-dataset">Step 2 - Browse the dataset<a class="anchor-link" href="#Step-2---Browse-the-dataset">&#182;</a></h3><h4 id="Explore-the-association-between-y-variable-and-some-features">Explore the association between y-variable and some features<a class="anchor-link" href="#Explore-the-association-between-y-variable-and-some-features">&#182;</a></h4><ol>
+<li>positive correlation between obesity level and poor health</li>
+<li>negative correlation between life expectancy and poor health, i.e., the shorter lived, the healthier</li>
+<li><strong>the less smoking, the healthier; yet the more excessive drinking, the healthier</strong></li>
+</ol>
+<p>This is a very bizzare relationship at first glance. Hence I will include the interaction terms between the two terms to correct for some underlying joint effect. Below I plot the joint distribution of the two variables.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Proportion.of.Smokers&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Excessive.Drinking&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">county_data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa8AAAGoCAYAAADxbmq5AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAgAElEQVR4nO3deZxcVZn/8c/Ta7rTnXQnnX2HJISwJCRhkTgIjiC4Ma7gqIyiMrjr6IzO4jI/R8d9XMYZRATFDVdGFCQoqChrAgRISEJCCGTvrJ1Op/d+fn9UNRRNd9et5datW/V9v1716lrurXpuOqlvzrnnnmPujoiISJxURF2AiIhIphReIiISOwovERGJHYWXiIjEjsJLRERipyrqAvJMQydFpJRY1AUUK7W8REQkdkqt5SUx5+7sauti4+4jbG49yt4jXew/2sOx7j76Bpy+/gH6Bpz+AccMqisrqKqsoKbSqKqooKrSqKlM/Ew8X0FVReL+mOoKxtZUUV9bmfhZU0l98nFjbRWTGmsZX1eNmf6zK1LsFF4Sub7+Af68eT+/27CXOza0sudI1zOv1VVXMr6+mvrqSioqjEozKiqgwgx36B/oo29ggP5koPUPeCLknrmfeK2vP/FcOtWVRktDLZMba5neVMeCyQ0smNLI8jnNTG+qC/OPQUQyYCU2w0ZJHUypO3yshx/d/zQ/uOcpdrV1UVddwSkzmjhpxjjmThzLzOY66mvy9/+rgQGnq6+f7r4Bunr76eodoLu3n66+fjq6+2nr7KWts5fDx3o4fKyX/Ue72XOki8HMmz2hnnNPmMRrls1kyczxaqFJIegv2QgUXlJwXb39XH/PNv77ji0c6erjpOnjuGDxVE6b3UR1ZXGdhu3pG2Dn4U427D7C+l1HWLezjZ7+AeZPbuC9583nlUumU1mh7xcJjf5yjUDhJQV15+P7+JdfPsqOw52cNquJS06fxZyJY6MuK7CO7j7uffIAv3tsL08dOMbCKQ3828sXc87CSVGXJqVJ4TUChZcURFtnL5/+zWP8/IEdTG8aw9vOnsfJM8ZHXVbWBty5b+tBfvbAdna3dfHms2bzLy87Ma/dnCIovEak8JLQPfT0Id73o4fY1dbJK5dM5zWnzaSmqri6B7PV0zfAT9Zs57eP7mZuy1i+fdkK5k9uiLosKR0KrxEovCQ0AwPONX/Zyhdu3URzfQ3ve/F8FkxpjLqsUKzf1cbX79iMYXzrLcs567iJUZckpUHhNQKFl4TiYEcPH/7pWv6waR+nz23minOOp6G2tLvUWo908YVVm9h7pIv/umQpr1wyPeqSJP4UXiNQeEne3bf1AO+/4SEOHO3hLWfN4fzFU8pmWPnR7j6+8rtNbNrTztcuPU0BJrkqj384WVB4Sd70DzjfuGMzX799M1PGjeF9L17AvJb4jCTMl67efr6waiOP7znK1994Gi8/dVrUJUl8KbxGoPCSvNjT1sUHbniI+548yAvnt3D5ynnU1VRGXVZkunr7+fytG9nSepRr33q6htJLthReI1B4Sc7u2LiXf/jpw3T19vO2s+fpizrpWE8f/+/Xj7G/o5uf/v0LOGl6fC8NkMgovEag8JKstXX28tmbN/CTNduZM7Ge9794geb/G+JgRw+f+NU6KiqM/3vPSmboz0cyo/AagcJLMuburFq/l0/8ah37j3bzilOn89plpXPtVr5tP3iMT/16PdOb6vjFlWczvr466pIkPhReI1B4SUY2723nU79ez11bDjB7Qj1XnHMcx0/SRbnprN/Vxud+u5Hlc5q5/u1nUFtVvucDJSMKrxEovCSQLa3t/PcdW7jp4V3U1VTy+uWzeMmJUzQpbQbu2rKf//7DFl61ZDpfvWQpFfqzk/T0l2QEpX3VqOTs8b3tfOOOLfzm4V3UVFXwslOm8col0xk3Rl1fmVo5v4UDR7v58ertTG+q42MXLYq6JJHYUnjJsDbsPsI37tjMLY/uoa66klcumc7LT5nGuDqFVi5euWQ6+472cNWfnmBGcx1vOWtO1CWJxJLCS55j3c42vnHHZlat30t9TSWvPm0GF508lUa1tPLCzHjr2XM51NHDJ3+1jqnjxnD+4ilRlyUSOzrnJUAitL76+8f5/YZW6msquejkqVx48rSSn48wKl29/fzHzY+x83AnN1zxApbOaoq6JClOOuc1AoVXmdt5uJMvrdrEjQ/tpKG2iotOnspLT5rKWIVW6A4f6+GTN62nb8C58d1nx2pRTikYhdcIFF5lqrd/gKvv3MrXb9/MgDsXnTyNi5dO12KKBbbrcCefumk9TWOr+fmVZzNl3JioS5LiovAagcKrDD28/TD/+POHeXzvUc6YN4G3nDWHlobaqMsqW1ta2/nsLRuY0VzPT644i4n6XcizFF4jUHiVkf4B53//uIX/+t1mmuqreevKuayYMyHqsgR4bFcbn791EwumNPDDd5xJU31N1CVJcVB4jUDhVSb2HunifT96iPu3HeQFx0/k7Svn6bxWkVm7/TBfvm0TC6c08v23n6EWmIDCa0QKrzKwettB3v2DB2nv7uVtZ8/jrxa0lM3ikHHz8PbDfOV3jzNnYj0/fOeZTG7UObAyp3+oI1B4lbgf3vcUn/zVeloaavmH8xcya0J91CVJGut3tfHFVZuYPK6W6y8/sywX9JRnKLxGoPAqUQMDzudu3cjVd25l6awm3nvefHUTxsiW1na+uGoTlRXGtW89ndNmN0ddkkRD4TUChVcJ6urt54M/Wcut6/ZwweIpXPaCuZpAN4Z2t3XyhVs3cuhYL1943alcvHRG1CVJ4ekf7ggUXiVm/9Fu3vG9NTy8/TBvPmsOF508Vee3Yqyts5ev/v5xNu5p513nHs9HLjhB/xEpL/plj0DhVUK2tB7lrdfdT2t7N+89bz6nz9Uw+FLQ1z/A9+7Zxu83tLJy/kS+eslpTGrUSMQyofAagcKrRKzedpB3fG8NAP/40hO0QGQJ+sPGVr53zzYax1TxtUtPY+X8lqhLkvApvEag8CoBNz+ymw/9ZC0tjTV89KWLmKwphkrW9oPH+Nodm9l5qJO3rZzLRy9cxJhqrcpcwhReI1B4xdw1f97KZ27ewMKpjXz4/IVauqQMdPf18+P7t7Nq/R6OaxnLF19/Kss1U0qpUniNQOEVU/0Dzn/c/BjX3bWNM+ZN4D3nzqemqiLqsqSA1u1s41t3PsH+oz387Zmz+eiFixivxUJLjcJrBAqvGOrq7eeDN6zl1vV7uOjkqbz5zDlUaARaWerq7ednD+zg1nW7aa6v4SMvPYE3rJilEYmlQ7/IESi8YuZQRw/v+N4aHnz6EG8+aw4vO2Va1CVJEXhyfwfX37ONjXvaOXFaI/904SLOXThJl0nEn36BI1B4xcjGPUe44voH2N3WybvPnc9Zx02MuiQpIu7OvVsPcsPqp2lt72b57GY+eP4CXjhfc1nGmH5xI1B4xcRvHtnFP/7sEWqrK/jQSxaycEpj1CVJkerrH+CPj+/jxod2crCjh8XTxnHFOcdx0SlTqa3SyMSYUXiNQOFV5Pr6B/jiqk18686tnDClkQ+8ZAHNWutJAujtH+AvW/Zz86O72Xmok+b6at6wYhavWTaThVMa1BqLB/2SRqDwKmIHO3p4348f5K4tB3jJiVP4uxfMoapSIwolMwPurNvZxu0bWlnz1EEGHI6fNJaXnTKNl50yjUVTGxVkxUu/mBEovIrUnY/v48M/e5hDHT1cvnIe5y2aHHVJUgIOH+th9baD3P/kQR7bfYQBh7kT6zn3hMmsnN/CmcdNYJyuFSwmCq8RKLyKTEd3H19ctYnv3r2NGc11vOfc+VrPSULR1tnLmm0HWb3tIBv3tNPdN0ClGafOHM/K+S0sn9vMabOaaFI3dZQUXiNQeBWR3z+2l4//ah2727q4YPEU3nTmHF14LAXR2z/A5r3trNt1hPW72tjSepSB5L+m41rGctrsZpbNaWLZ7GYWTmnUdWSFoz/oESi8isD6XW184dZN/OnxfcyaUMfbVx7HCVM1mlCi09Xbz9Z9R3m89Shb9h5lc2s7R7r6AKivqeSUGeNZMquJU2aM59SZ45k9oV7nzcKhP9QRKLwitG5nG1f96Ql+88huGmqruHjpdC48eSpVFWptSXFxd1rbu9ncepTNe9vZur+Dbfs76Es2z8bXVXPqzPHJMGvi1JnjmTZ+jAItd/oDHIHCq8A6e/q57bE9/Pi+p7n3yYPUVVdywUlTeOWp0xlbWxV1eSKB9fUPsP1QJ1v3HWXr/g627jvK0wePPdPd2NJQw6kzn22dnTqzSeuQZU7hNQKFVwG0dfZy5+P7+MPGVlY9toeO7n4mNdZyweIpvHjRZOprFFpSGnr6Bnj6YAdP7Ot4JtR2Hup85h/mlHG1nDB1HAsnN7BwSiMLpjSwYEojDfqP20gUXiNQeOVZV28/T+w7yuN723l4exurtx1kQ3JIcuOYKpbNbuacBS0smjaOCnWpSBno6u1n2/5EoD15oIOdh46x83Anvf3P/nOdPn4MC6c2MnfiWOZMrGfOxHpmTxjLrAl15T4riL4kRqDwysKxnj52He5k+6FOdh7qZOfhTp460MGmPe1s23+M/uSfaU1VBQsmN3DClEaWzGpi/qQGzf4uAgwMOHvbu9h5qJMdhzrZcegYOw53svdIF129A89sZ8DU8WOYM7Gemc31TGqspaWhlkmNtUxqqKWpvpqxNVWMra1kbG0VtVUVpXaeraQOJp9KKrw27233AU/MKDDgjj9zn+Tj5P2BxM/Bx739Axzr6aejp4/O1J/d/XR093HwWA8Hjnaz/2gPBzq66ejuf87nVlYYkxprmdlUx6wJ9cxqTvycOn6MBl+IZMDdaevspbW9m71HupK3blrbuzhwtIe2zt5nBokMp9KM2uoKqisrqKmsoLrSqK5K3K+pevb5xH2jurKC6qoKaisrkvdtyDaDN6M29XFVBTWV9sw2lRWGYZgl0sbMqDBI5Ogwzyefg8Q2FTa4zXO3nT+5QeE1gpIKr7kfuzlvB1NhUFddSV1NJePrqmmqq6apvoam+sTPKeNqmTJuDFPGjWHC2Bpd9yJSAO5Oe1fiP5SHOnpo7+qjs7efzp5+jvX0c6ynj95+p69/gN5+p3dggL5+p7c/5Wfyub4Bp6d/8H7iZ0//wDPb9vQNRH4eYtvnXq4vlhGUVHiZ2a1AS9R1JLUA+6MuIkLlfPzlfOyg48/n8e939wvz9F4lpaTCq5iY2Rp3XxF1HVEp5+Mv52MHHX+5H3+h6ISMiIjEjsJLRERiR+EVnqujLiBi5Xz85XzsoOMv9+MvCJ3zEhGR2FHLS0REYkfhJSIisaPwEhGR2FF4iYhI7JTUOgTnnf9S//GNN0ddhohIXkxtqAo8PdTSF5zra+/5Y4jVRGLE4y+pltfBA+U8I42IlLMjhw9GXUJBhRpeZnahmW0ysy1m9rFhXr/YzB4xs7VmtsbMXpjy2jYze3TwtTDrFBGReAmt29DMKoFvAucDO4DVZnaTuz+WstntwE3u7mZ2KvBTYFHK6+e5u5pTIiLyHGG2vM4Atrj7VnfvAW4ALk7dwN2P+rNXSY+lCFZCFhGR4hdmeM0Atqc83pF87jnM7NVmthG4Gbg85SUHbjOzB8zsipE+xMyuSHY5rjmwX400ESkfqd9/7UePRl1OQYUZXsONEnley8rdb3T3RcDfAJ9OeWmluy8DLgLeY2bnDPch7n61u69w9xUTW4plKS8RkfClfv81NDREXU5BhRleO4BZKY9nArtG2tjd7wSON7OW5ONdyZ+twI0kuiFFRGQ4ZXbSJczwWg0sMLN5ZlYDXArclLqBmc03M0veXwbUAAfMbKyZNSafHwtcAKwLsVYRkZgrr/QKbbShu/eZ2XuBVUAlcK27rzezK5OvXwW8FrjMzHqBTuCS5MjDKcCNyVyrAn7k7reGVauISNyVV3SFPMOGu98C3DLkuatS7n8e+Pww+20FloRZm4iIxFdJzbAhIiLlQeElIiKxo/ASESkB5XbOS+ElIlIKyiy9FF4iIhI7Ci8REYkdhZeISAkos15DhZeIiMSPwktERGJH4SUiIrGj8BIRKQHPrutbHhReIiISOwovERGJHYWXiIjEjsJLRERiR+ElIlICymu4hsJLRERiSOElIlIKyqzppfASEZHYUXiJiJSAMmt4KbxERCR+FF4iIhI7Ci8REYkdhZeISAnwMjvrpfASESkF5ZVdCi8REYkfhZeIiMSOwktERGJH4SUiUgLK7JSXwktEROJH4SUiIrGj8BIRKQVl1m+o8BIRKQFlll0KLxERiR+Fl4hICdD0UCIiEjteXtml8BIRKQUKLxERiZ2BMksvhZeISAkos+xSeImIlAK1vEREJHbKK7pCDi8zu9DMNpnZFjP72DCvX2xmj5jZWjNbY2YvDLqviIg8y9Xyyg8zqwS+CVwELAbeaGaLh2x2O7DE3ZcClwPXZLCviIgkDZRXdoXa8joD2OLuW929B7gBuDh1A3c/6s/+d2Esz7Z80+4rIiLPUssrf2YA21Me70g+9xxm9moz2wjcTKL1FXhfERFJKLPsCjW8bJjnnvfH6+43uvsi4G+AT2eyL4CZXZE8X7bmwP79WRcrIhI3qd9/Gm2YPzuAWSmPZwK7RtrY3e8Ejjezlkz2dfer3X2Fu6+Y2NKSe9UiIjGR+v3nlFfXYZjhtRpYYGbzzKwGuBS4KXUDM5tvZpa8vwyoAQ4E2VdERJ6rt798wqsqrDd29z4zey+wCqgErnX39WZ2ZfL1q4DXApeZWS/QCVySHMAx7L5h1SoiUgq6+/qpqSqPy3etlJqZS5Yt91V33hd1GSIieTG1oWq48//Dqp22wHduXkdLQ22YJRXaiMdfHhEtIlIGevoGoi6hYBReIiIlolvhJSIicdPd1x91CQWj8BIRKRHdvWp5iYhIzPT0K7xERCRm1PISEZHY0TkvERGJHY02FBGR2NF1XiIiEjvqNhQRkdhRt6GIiMSORhuKiEjs6DovERGJne5enfMSEZEYMXTOS0REYsbMFF4iIhIvZmp5iYhIzCS6DXXOS0REYsTMNFReRETipcLgSFdv1GUUjMJLRKQEVJjRdkzhJSIiMVJZYRzq7Im6jIJReImIlIAKM9o61fISEZEYqayA9s4+estkiiiFl4hICaisqMCBPW1dUZdSEAovEZESUF1pAGw/eCziSgpD4SUiUgKqKhJf5zsOdUZcSWEovERESkBVpVFhsP2QWl4iIhITBrQ01PLUAYWXiIjEyPSmOja3tkddRkEovERESsTM5jqe2NdBXxkMl1d4iYiUiJnN9fT0DfBUGYw4VHiJiJSIWc11AGzeW/pdhwovEZESMaO5DgM27C798KqKugAJz9rdz7/Sfum0MRFUIiKFUFtVyYzmOtbtbIu6lNApvErMcIE10usKMpHSM2/iWB4pg/BSt2EJSRdcuW4vIsXvuElj2dfezd4jpf3vW+FVAtbu7so6iHLZV0SKz7yWBgAe2VHarS+FV8wpeEQk1ZyJ9VQYPPj0oahLCZXCK8byGVwKQZHSMKa6kvmTG7h7y/6oSwmVwiumwggbBZhIaTh5+nge3dlW0isrK7xiKMyQUYCJxN9JM8Yz4HDv1gNRlxKaUMPLzC40s01mtsXMPjbM628ys0eSt7vNbEnKa9vM7FEzW2tma8KsU55LASYSbwsmN1BbVVHSXYehhZeZVQLfBC4CFgNvNLPFQzZ7EniRu58KfBq4esjr57n7UndfEVadcVOoYFGAicRXdWUFJ04bxx0bW3H3qMsJRZgtrzOALe6+1d17gBuAi1M3cPe73X1wSMy9wMwQ64m9QgeKAkwkvk6fO4HthzpZv+tI1KWEIlB4mdkHzGycJXzHzB40swvS7DYD2J7yeEfyuZG8HfhtymMHbjOzB8zsilFqu8LM1pjZmgP7S7eJHFWQ6DowkeKV+v136OBzz2+tmNtMhcFvHtkdUXXhCtryutzdjwAXAJOAtwGfS7OPDfPcsO1XMzuPRHh9NOXple6+jES343vM7Jzh9nX3q919hbuvmNjSkqYkyZYCTKT4pH7/NU+Y+JzXxo2pZsnMJn754I6SXN8raHgNBtHLgOvc/WGGD6dUO4BZKY9nArue98ZmpwLXABe7+zP/dXD3XcmfrcCNJLohy1KxBEex1CEiwZx3wmRa27u5c/O+qEvJu6Dh9YCZ3UYivFaZWSOQLspXAwvMbJ6Z1QCXAjelbmBms4FfAm9x98dTnh+b/AzMbCyJFt+6gLWWlGILDHUjisTHaXOaaKqr5gf3PBV1KXmXdlZ5MzPgEyS6C7e6+zEzm0ii63BE7t5nZu8FVgGVwLXuvt7Mrky+flXyfScC/5P4GPqSIwunADcmn6sCfuTut2Z5jBICzU4vUvyqKir46xMn84sHd/LEvqMcP6kh6pLyJm14ubub2f+5+/KU5w4Aaa9+c/dbgFuGPHdVyv13AO8YZr+twJKhz5ebXFs4D+3uDLTdadPqcvqcoXUODbNcjkPBKJKbl5w4hV+t3cV3/vIkn331KVGXkzdBuw3vNbPTQ61E8ipocA1um8n26Qx2Leaji1HdlCK5aaqv4ZyFk/jZmu3saSudf0tBw+s8EgH2RHI2jEfN7JEwC5PsZRtEgyGWzyDLF4WYSPYuXjKd/gHnqj89EXUpeRN0JeWLQq1CnifbL+p8Bc/g++TapZhva3d3qStRJEOTx43hnAWT+OF9T/H2F85j1oT6qEvKWaCWl7s/RWLY+4uT948F3VcKJ4wWUzG2xNQCE8nc65bPxDC+uGpT1KXkRdAZNj5J4gLif04+VQ38IKyiyl02X85hB0yxhZgCTCQzExtqedkp07jp4V2s3X446nJyFrT19GrgVUAHPHMBcWNYRUlmChkqxRRiCjCRzLxqyXTG11XzmZsfi/2EvUHDq8cTR+rwzIXDUsaKJcQUYCLB1dVU8rrlM1m97RCr1u+NupycBA2vn5rZt4AmM3sn8HsSUzpJnmX6ZZxtgKzd0/WcW7aKIcQUYCLBnXfCZGY11/Efv3mMzp7+qMvJWqDRhu7+JTM7HzgCnEBiZow7wyxM0ss0NEYLqaGvLZ2a2Yi+1FqiGKGoUYgiwVRWGG9bOY//95vH+MYdm/mnCxdFXVJWAoWXmV3r7pcDv0s+biAxc8Zfh1hb2QmzBZFp62pw+0xDDIYP1UIE2uCfn0JMZHQnThvHOQtauPrOrbz6tBksmBK/IQxBr/PaaWb/6+7vMrNm4Gbg2yHWJWlk0urKpVswlxBLVaipqkCtMJEg3nTmHB58+jD/euM6fvL3Z5GcSzY2gl7n9XHgiJldBdwGfNndrwu1MsmLXIJr6Pvk671Gk69ZPnQeTGR04+qqufSMWdy/7SA/f2BH1OVkbNTwMrPXDN6A+4GzgIcATz4neZLJl23QL/YwwqYQATYo1xBTgImM7rwTJnPClEY+/ZvHYjfvYbqW1ytTbq8gEVzVKY+lSIUZMoVqhQ3KJcQ0J6LIyCrM+PsXHUd33wD/+POHY3Xt16jnvNx91DW7pPCCfIkXKljydT4sqFzmW9R5MJHhTRtfx9+eOZvr7trGD+57mrecNSfqkgIJOj3UTDO70cxazWyvmf3CzGaGXZzEQxQtsWyoFSYyvPNPnMKpM8bz2Zs38OT+jqjLCSToRcrXATcB04EZwK+Tz0mRySVENuw8lPNnFyrEcu1KFJFnmRlXnHMcFRXwDz9ZS2//QNQlpRV0qPykIaMLv2tmHwyjoHIU9Ms03zNZDBdWQ587cUZzxu+b6wXPmXhod2fW3Yiga8JEBk1sqOXylfP4xh1b+OKqTfzLy06MuqRRBQ2v/Wb2ZuDHycdvBA6EU5JkK2irJ5MW1uC22YTYoExbY9nO7qEQE8nN2ce3sGF3O1ffuZVls5u48ORpUZc0oqDdhpcDbwD2ALuB1yWfk5jJtmsw1y7FTGQ752I+RiWqS1HK3WUvmMPxk8by4Z89zKY97VGXM6KgFyk/7e6vcvdJ7j7Z3f8muSilFIkgX/S5BtCGnYcKGmKQXZDl4wJnhZiUq+rKCj70koXUVFbwtuvup7W9OP8tBB1tOM/MvmJmvzSzmwZvYRcnz8r1CzmfoRNFiEFmA0LyNUuHgkzK0cSGWj5ywQkc6OjhHd9bU5SzzwftNvw/YBvwDeDLKTcpAum+0MMKmnIJMVBrTMrPcZMaeO9583l0Rxsf+ulaBgaK6wLmoOHV5e5fd/c/uPufBm+hViaxEZcQy8tnKsSkjKyYO4E3nTmHW9ft4QurNkVdznMEHW34NTP7JIlJebsHn3T3B0OpSvKmkKGSj5GJ2Qg600cuoxKf95kapShl4mWnTGXPkU6u+tMTzGup55LTZ0ddEhA8vE4B3gK8GBi8es2Tj0WeIx+Bme31ZUGG2SvERIIzM9569jxa27v51xvXMXvCWF5w/MSoywocXq8GjnP3njCLkWgdfnrj855rmh3NKqvZXiydyXyLCjGRYCorjA/89QI+edN6/v4Ha/jVe17IvJaxkdYU9JzXw0BTmIVIdkY75xO0BXT46Y3DBlfqayO9XiiD59WCHlOmQ+s1sENkdPU1VXzkghPA4W3X3c/hY9G2ZYKG1xRgo5mt0lD5wsv3tFDZKqYgCyKbeRbzGWIipWbKuDH8w/knsONQJ+/6wYP09EU3B2LQbsNPhlqFRCbbIBrcL+puxXTdidku25IaYNl2K6orUUrRCVMbueKc4/ifPz7B52/dyMdfsTiSOoLOsDE4NH4dMAE4qqHy+RPnL7eoW2JhtsIGaUVnkef6qwWTuGDxFL7zlyf50+P7Iqlh1PAys9+Y2cnJ+9NIhNflwPc1q7ykijLEMgmwqEJMASal5k1nzmFWcx0f/ulaDnUU/vxXupbXPHdfl7z/NuB37v5K4Ew0MW/BZNttVejrrSC682KZDM/PR4hlQwEmpaSmqoL3nDefgx09fPl3hb+AOd05r96U+38NfBvA3dvNrPhXKysDS6eOKegqxpnINsCyPY+2YeehjAI72/NhkP0w+7W7u2LdTSySas7EsZy/eCo/uu9p3njGbE6aPr5gn+sOjd8AACAASURBVJ2u5bXdzN5nZq8GlgG3AphZHVAddnFSnnJpvWVzgXS2S7BAdq0wtcCklLxu+UzG1lbxxVsL2/pKF15vB04C3gpc4u6Hk8+fBVw30k5SPNK1RKIaLRhUNiGWywwfhVpHTAEmpaKhtooLT5rKHx/fx+N7C7f+16jh5e6t7n6lu1/s7relPP8Hd/9S+OWVj1y6krLp9kpV7AEG2XdBZqsQrTAFmJSK8xdPobaqgmv+vLVgnxn0IuXnMbMr8lmIjC6XKYyiGLgRhkwCLB8z3WfbCsvoMxRgUgIax1Rz9vETufnR3XT1Fmbtr3RD5Vcmf9YO93IoFUlWyqH1lY18TBKsABNJ76zjJtLR3V+w677Stby+nvx5z9AX3P1b+S+nvKXrOgy79RWHAMt2EEc+WmFhUoBJ3J00fTyNtVXctn5vQT4vXXj1mtl1wAwz+/rQWyEKlODStb7KOcAg88l9h8p0st+M31+T+kqMVVYYJ04fx71b9xfk89KF1yuAVUAX8MAwNymwdK2vYg+wrm1rn3eLQrYhFnaAgVphEl+Lp41j5+Eudhw6FvpnjXqRsrvvB24wsw3u/nCmb25mFwJfAyqBa9z9c0NefxPw0eTDo8C7Bj8n3b6laum0MUXx5TUYYPkY5ZcuoFJfHzN3aaD3PPz0xryEbKYXNheKLmaWOJo/uQGAdTuPMLO5PtTPCjra8ICZ3WhmrWa218x+YWYzR9vBzCqBbwIXAYuBN5rZ0OmHnwRe5O6nAp8Grs5g35KV67mvfLS+BuUSENm0rKJojWXaAitE6wvUApP4mdlcR4XBxj1HQv+soOF1HXATMB2YAfya9BcpnwFscfetyRWYbwAuTt3A3e9298FvjnuBmUH3LXdxCbBsBQmwfF77lY9RiSPJNcAUYhIXtVWVTBk3piAXKwcNr8nufp279yVv3wUmpdlnBrA95fGO5HMjeTvw20z3NbMrzGyNma05sL8wJwoLIUiXUTEHWD5aT8UcYIWeT1IBJsNJ/f47dPBA1OUAMKmxlqcPhn/OK2h47TOzN5tZZfL2ZiDdn9Rw14H5sBuanUcivAbPfwXe192vdvcV7r5iYktLmpLiJe4BVihRr+wchFZnljCkfv81T5gYdTkATG4cU1ThdTnwBmAPsBt4HemXRNkBzEp5PBPYNXQjMzsVuAa42N0PZLJvOSj3AAvagstXgIXZ+spXgCnEpJhNGFvDkc6+0GfaCLqS8tPu/ip3n+Tuk939b9z9qTS7rQYWmNk8M6sBLiVx3uwZZjYb+CXwFnd/PJN9Jb+KccTdoEIHWJjyEWCgEJPiNb4useDIgZAXqMxlbsNXjPa6u/cB7yVxndgG4Kfuvt7MrjSzK5ObfQKYCPyPma01szWj7ZttrXFXiNYXBA+wYu0+hPwEWDGf+3re5yvApMgMhtf+9u5QPyfr8AJOT7eBu9/i7gvd/Xh3/0zyuavc/ark/Xe4e7O7L03eVoy2bzkr9wDLZABIsc9An6/W1zOfr1aYFJHxdYnLh/cfLdLwcvdP5rMQSS8fARZEMXchBpVrgIU5dB7yH2CgVpgUh2daXsUSXmZ2tpn9rZldNngLszAZXq6zLgSdfT7qaaSGk+nw+2xXY85GoVZhTluHAkwi1lRfA8CetiIILzP7PvAl4IUkugtPB1aMupNEJh/dh5BbCyzoNE+FkMtEvpko1CrMaetQgEmEqisraKqrZndb/v9zlipoy2sFsNLd3+3u70ve3h9mYTKyQp3/gvQBVsyDN1IVKsCgOFphCjCJ0oSGGna3hft3MGh4rQOmhlmIZCYfk7aG3QILo/WVy8wdCjCRwphQX8Ouw8XR8moBHjOzVWZ20+AtzMIkd/kYvBFEXFpfUPgAK4ZuRJFCm9hQy662TtyHnRgpL4KG16eAvwE+C3w55SYRKqbuw5EUW+sLcl/MMlPZhlg+qPUlUZjeNIaO7v5Quw6DzrDxJ2Aj0Ji8bUg+JxHLV/dhrteAjdb6KqbBG4NyGYWY7YrMUV8PJlIosyck1vLasDu8pVGCjjZ8A3A/8HoScxzeZ2avC60qyaug3Yf5vIh5qHwHWD5mrc/XbByZzshRqPXAnvlMtb6kwOZMGEuFwdrth0P7jKDdhv8KnO7uf+ful5FYb+vjoVUlGcnnxctBuxGHU+zXfQ0nnxP6ZhJkCjApZXU1lcxrGcs9T4S3TEvQ8Kpw99aUxwcy2FeKRL4CrJi6D/MVYPleFyxIiGXSClMXosTNidPGsXb7YY5294Xy/kED6NbkSMO3mtlbgZuBW0KpSLKSj3Nfz3m/PC6jkmrM3KVF2YUI0YZYELkGmFpfUkjLZzfTN+DcvmFvKO8fdMDGPwJXA6cCS4Cr3f2jo+8lxSiT4fPZdiEG6T4MI8DyHWJDb9kKEmJqgUmpWTi1keb6an7zyO5Q3r8q6Ibu/gvgF6FUIXmxdNqYQP+7HgywIF+ES6eOGfGL9cQZzTlNYDtm7tK8Bc6g1PfLd0COFmBBAnvDzkOjtljX7unK6ZxjEGt3d+W9lS4ynAozXnB8C7et38PeI11MGZffv3ejtrzM7C/Jn+1mdiTl1m5m4Y2BlKxl8sUU5kXMQQdvhDmMPp+tsXSCttDy0QJT96HExQWLp9A/4Fx/z7a8v/eo4eXuL0z+bHT3cSm3Rncfl/dqpOCCBNhorYF8LJ8SxnmwVIMhVuggG0m6bkQFmJSKKePGsHxOMz+492mOdPXm9b0zmVU+7XNSHDLtFso1wPKlEBczFzLICrkkSza0iKUUwmuWzaSts5er/vhEXt836GjDk1IfmFkVsDyvlUhehRFgmSr2OQ9TgyzMMBspwKJufT3zWQoxCdG8lrGsnN/Cd/7yZF4n6x11wIaZ/TPwL0BdyjkuA3pIjD6UIhZ0AMeg06bVjfqFONLgjVwHbqQKYxBHULl8brpW4+GnNw4b5ukGcaTz0O7OvP3HY/DvigZ0SL5dsmImq7cd5OO/Wsc1l63AzHJ+z3TnvP4TGA9cP+R810R3/+ecP11Cpy+iwgjSesu0CzGbZVXyYbAlptaY5MukxjG8fvlMbt/Qmreh82m7Dd19gMS1XVIGCrWMSqnKpguyWLoPh/18hZjkyUUnT+O4SWP5xK/W0dqe+9+poOe87jWz03P+NIlEObW+Op98aNhboY0UYNmc/woi7IuXFWKSq8oK410vOp6O7n7+6WeP5LzWV9DwOg+4x8yeMLNHzOxRM3skp0+Wgorq+q9CDNoIElJRBFqmATaSYpp9QwEmuZjZXM+bzpzNHx/fx/X3PJXTewWdYeOinD5FSsZoM27kQ6ZdbrmEUD4CrG7eaaO+3rVtbeBLAHIdvFEomqVDcnH+4ims3X6Yz96ygZXzW5g/uSGr9wk6t+FTQBPwyuStKfmcxEgpfeFE1R04Uh2j1TJcIMe59QVqgUn2zIx3nnMc1ZUVfOgna+ntH8jqfYJepPwB4IfA5OTtB2b2vqw+UaREhR2mmQSYuhClmDXX1/D2F87j0Z1tfPMPW7J6j6DnvN4OnOnun3D3TwBnAe/M6hNFclQMLa6RjFRb0O7QfF0vBzoHJsXtrOMmsvL4iXzj9i08siPzFZeDhpcB/SmP+5PPScwE7TrUkPnsBQ3XbKaOyvR8o5ZQkWL21pXzGF9fzQd/spbuvv70O6QIGl7XAfeZ2afM7N+Be4HvZFinSNkYLsDy1foqtgBT60uy1VBbxTv/ah5b93Vw/d2ZDaMINNrQ3b9iZn8EXph86m3uXrx9N1Jwo00R1TR7UVFPUJuq66nMRjuOmZPbZMLZThuV6dpfgwEWVotaIxAlW0tnNbN0VhNfv2Mzr10+kwljawLtF7TlNcgAR12GEpJ0w8qzOd/V9dTawLds3juftWYim0sWwp6NQyQbbzpzNh3dfVzz562B9wk62vATwPeAZqAFuM7M/i2rKiVyUfwPOaoZ5rMJpDA/I5Nh80EGb2QbYGGFmAJMsjGzuZ5ls5v58f1P09Ub7NxX0JbXG4HT3f1T7v5JEqMN35RlnVKm8hFg6S4KjspIAZZr6yusAIPwWmEKMMnGS0+ayqFjvdzyaLCJe4OG1zYg9b/rtUB+VxaT2MvX7BCFWJQyDEFbYJletBx2gIURYgowydRJ08cxYWwNf9i0L9D2QcOrG1hvZt81s+uAdcBRM/u6mX09y1olpnJZVbnYF6gsVmEGGITTClOASSbMjEVTG7lv64FAk/YGDa8bSSxK+Qfgj8C/Ar8FHkjeJGbCOu8VpPWVa4Bl0nWY62jAfAjzuq+hcg2wfIeYAkwysWByA63t3exr7067bdC5Db8H/Jhnw+pH7v69wVtO1UrRynZYdT4CrBy7DtPJ5+wbo1GASVTG1iau3jrWk37QRtDRhucCm4FvAv8DPG5m52RdocReLl2HQY0WYHFrfQWVrvUVdvfhIAWYRKG6MhFJ3X3pJ+sN2m34ZeACd3+Ru58DvBT4r2wLlOIQ5pB5dR+ml6/1vsKiAJNCG+wubGlIf6Fy0PCqdvdNgw/c/XGgOpviJF5G6zpM1/oqRPdhXAIsnxcsF6r7UKTQtuw7yszmOiY21KbdNmh4PWBm3zGzc5O3b6OBGhKAAiw7uba+8rVgqFpfUiidPf08tusIp8+dEGj7oOF1JbAeeD/wAeCx5HMSc0G6DnNpfUHxBVgxyWbghkgp+t2GvRzt7uPvzp4baPu04WVmFcAD7v4Vd3+Nu7/a3f/L3dOOZTSzC81sk5ltMbOPDfP6IjO7x8y6zewjQ17bZmaPmtlaM1sT6GgkEnELsLi0vkTKRXtXLzc/uou/WtDC0llNgfZJG17uPgA8bGazMynGzCpJjE68CFgMvNHMFg/Z7CCJ1tyXRnib89x9qbuvyOSzJTO5tr6guAIsSIiVeoDlazSo1nWTsA24879/fILOnn4+emHwQVxBuw2nkZhh43Yzu2nwlmafM4At7r7V3XuAG4CLUzdw91Z3Xw30Bq5YYi1fAZaPVlipB5hIHPz64V08tP0wH3/FYk6eMT7wfoHW8wL+PYuaZgDbUx7vAM7MYH8HbjMzB77l7lcPt5GZXQFcATBjVkaNQ0mxdNqYtCfTT5tWN+oJ/KVTxwQaKDDa2l+DgqwBNmbu0lHPGdXNOy3tKL/BAMvX7POlEIhqbcVH6vfflOkzI64mc7dv3MsNq7fz8lOm8Zaz5mS076gtLzMbY2YfBF4PLALucvc/Dd7SvPdwa36ln7DqWSvdfRmJbsf3jHRRtLtf7e4r3H3FxJaWDN5ehipU9yEEb4Hl2gorZDdisQRXLl2GCq54Sf3+a54wMepyMvK7x/ZyzZ+f5NyFk/jyG5Zgltkykem6Db8HrAAeJREiX87gvXcAs1IezwR2Bd3Z3Xclf7aSmFvxjAw+WyKUzwCDYBcz56sbMZsAyna/bOVr9v5Up02rU3BJQbg7/7d2J9fe9SQvXjSZb122nDHVlRm/T7puw8XufgqAmX0HuD+D914NLDCzecBO4FLgb4PsaGZjgQp3b0/evwD4fxl8tmQpH92HkN8uRHg2wEbrShwMsJG6EoN0I0I4LaiRwjPfczhm2uoqdGBFsRCqFI/uvn6+9aet3LP1AK88dRpfesMSaqsyDy5IH17PDKRw975MmnXJ7d8LrAIqgWvdfb2ZXZl8/SozmwqsAcYBA8kuysUkVmu+Mfl5VSQmAr41+GFJ2KIIMAgeYqMFGOR3xot0srkGLeylY9TKkkJrPdLFf/3+cZ46cIyPXriIK190XMZdhalstHVTzKwf6Bh8CNQBx5L33d3HZf3JIViybLmvuvO+qMsoCUFnQggyA0Mmsz1kOvVRukEdow3oKESApQuukVpeI4XXaF2GQVtdUQWXWl2Zm9pQFfjb/cRTlvq1/3d7mOVk7S9b9nPdXU9SWWF8/dLTOG/R5KC7jnj8o7a83D279pzEXpDuQwjeAoNgIZZJKwzSj0oM0gqD/AdZoHNsZRRcUp6O9fRx7V+e5K4nDrB8TjNfvWQpsybU5+W9gw6VlzKUSYBB+lZYJt2IELwVlq4rMd25MMhPkGU0x2KGwZUPUQaXWl3lZ+32w3znL1s51NHLh89fyLvOPZ6qyqCXFqen8JJRBQ0wyO95MIgmxCD8eRKzGaSRa6tLwSWFcqSrl+vveYq7tuzn+Elj+fZlKzhtdv5HyCq8JK0oAwyiC7F8SxdaYXUXKrikENydu544wPfv2caxnn4+8NcLePd5x2c9mjAdhZcEEkaAQWaDOVK/xPMxvD41TMIMsmxDCxRcEg/72rv5zl+28vCONpbOauILrzuVhVMaQ/1MhZcElmmAQf7Ogw2VSWssk2vEhso01DLtEgwzuKKi0CofAwPObY/t4Sert2NmfOqVi3nLC+ZSWZH9EPigFF6SkcEvpqhbYYMyaY0FCbGh8n0R8dBaRhK3kYUKrPKz/eAxrv7zVra0HuXchZP4zGtOYUZT4f7OKbwkK/nuRoTcQgyCt8ZSgyPXFYszlUtoQfTBpZCSnr4BfrV2J796eBfjxlTx1UuWcvHS6TldcJwNhZdkLYxuRMhfiEFmQTYo34EWdPh7sQWXgkqG2rj7CN/+y1Z2He7iNafN4N9esZgJY2siqUXhJTkJoxvxmfdO+bIOuzWWKuypmYYKMtFuIYNLoSVDHevp48f3P83vN7Qys7mO6y8/g3MWToq0JoWX5EUY3YjPef8cgyzTkYqFkM/QgtyDS6Elw1mz7SDX3b2Nw8d6eMcL5/EPFyykvib66Ii+AikZmbTCMulGfN7nDPlCzzTMhoZGIcMs6HImhZ4dXsElQ3V093Hd3du4a8t+Fk1t5Lq3ns6SWU1Rl/UMhZfkXVjnwkb8vDy2yjI1XPDlut5WIVtboOCS53ts9xH+949bONTRy4despB3n3c81Xmc2ikfFF4SimzOhUFuIQb5OU+WiXwtDJnNdVtqbUm+9Q84P12znV8/vIvZE+tDm9opHxReEqpMWmGQvxCDwgdZprK90FitLQlDW2cv37hjM+t3HeHS02fx8VcsZmxt8UZE8VYmJSPTAIPnf0Hns0UG0YVZLjNjaAi8hGVLaztf/f1mjnb38eXXL+G1y2dGXVJaCi8piEy7EYdK/eLOd6tsqGyCLazpmvJ9sbGCS4a6b+sB/vsPW5g6bgzfu/wMTp4xPuqSAlF4SUHlGmKQ/1bZUFHPGxjG7BgKLRnObev38N27t7FsdjPX/N0KmiO64DgbCi+JRD5CbFC+W2VRCHMeQgWXDOfnD+zgFw/u4CUnTua//3YZY6rDWbokLAoviVQ+QwzyO+AjbGFPnKvQkpHctHYnv3hwB69fPpP/fM0peV3huFAUXlIUyiHECjHLuwJL0vn9hr38ePV2XrVkGp977akFWb4kDAovKSqpX75x7VIs9AKQCiwJau32w1z7lyd58QmT+PIblsY2uEDhJUWs2IMsqlWKFVaSjX3tXXzzD1s4YWoj33zT8qKbMSNTCi+JhbC6FQelC7OoggoUVpK7voEBvnb7Zszgqjcvp64mXoMzhqPwkljJd2tsUJThNJTCSvLtN4/s5ol9HVz15mXMbRkbdTl5ofCS2Mp3ayxKCiwJy562Lm58cCcXnjyVC0+eFnU5eaPwktiLa4gpsKQQfnjfU1RXGf/+qpOiLiWvFF5SMuIQYgosKaSt+46y5qlD/MP5C5kyrrT+7sV7uInIMIoxIJZOG1OUdUlp++WDOxlfV83bVs6NupS8U8tLSlKxtMIUWBKV1iNdPPj0Id731wtoHFMddTl5p/CSkhZViCm0JGp/2NSKGbzxjFlRlxIKhZeUhbCG2Kf7LJEoDLhz5+b9nHvCZKaNL57LQPJJ4SVlJ6zWmEJLisUTrUc52NHDq5ZMj7qU0Ci8pGzlK8QUWlJsVm87SFWFcd6iyVGXEhqFl5S9oeETJMwUWFLMHt3ZxulzJzC+rvQGagxSeIkMoWCSOGvv6uWpA8d47bKZUZcSKl3nJSJSQjbtbceBs46fGHUpoVJ4iYiUkK37Oqg04+Tp46MuJVQKLxGRErJ131EWTGkoiWVPRqPwEhEpITsOdXLitHFRlxE6hZeISIno6u3nQEcP8yc3RF1K6EINLzO70Mw2mdkWM/vYMK8vMrN7zKzbzD6Syb4iIvJcu9sSl3kcVyILTo4mtPAys0rgm8BFwGLgjWa2eMhmB4H3A1/KYl8REUmx63AnAMer5ZWTM4At7r7V3XuAG4CLUzdw91Z3Xw30ZrqviIg81662TioM5kysj7qU0IUZXjOA7SmPdySfC3tfEZGytO9IN1PHjaG2qrRHGkK44WXDPOf53tfMrjCzNWa25sD+/YGLExGJu9Tvv0MHD7C/o5vpzaU5i/xQYYbXDiB1IZmZwK587+vuV7v7CndfMbGlJatCRUTiKPX7r3nCRA529DCjSeGVq9XAAjObZ2Y1wKXATQXYV0Sk7Dhw4GgP08skvEKbmNfd+8zsvcAqoBK41t3Xm9mVydevMrOpwBpgHDBgZh8EFrv7keH2DatWEZG46x9w+gZc4ZUP7n4LcMuQ565Kub+HRJdgoH1FRGR4ff2JYQEzmspjVQTNsCEiUgL6BgYAyqblpfASESkBfQOJlte0cQovERGJif4Bp7aqgnF15bHGsMJLRKQE9A84kxprMRvuMtnSo/ASESkBfQPO5MbaqMsoGIWXiEgJ6B9wJjeWx0hDUHiJiJSE/gFn8ji1vEREJEYGXN2GIiISQ5MUXiIiEjfj62qiLqFgFF4iIiVi3JjyuMYLFF4iIiVjXF111CUUjMJLRKRENKrlJSIicdNQq/ASEZGYGVNdGXUJBaPwEhEpETVV5fOVXj5HKiJS4qoqymNSXlB4iYiUBIOymVEeFF4iIiWhnIILFF4iIiWhzLJL4SUiUgrKLLsUXiIipUDdhiIiEjtlNNAQUHiJiJQEK7OOQ4WXiEgJKLNeQ4WXiEgpUHiJiEjsVJRZeim8RERKQHlFl8JLRKQkaKi8iIjETplll8JLRKQUKLxERCR2dJ2XiIjEjlpeIiISOwovERGJnQp1G4qISNyo5SUiIrGjARsiIhI/5ZVdCi8REYkfhZeISAkos4aXwktEROJH4SUiUgrKrOkVaniZ2YVmtsnMtpjZx4Z53czs68nXHzGzZSmvbTOzR81srZmtCbNOEZG4K7PsoiqsNzazSuCbwPnADmC1md3k7o+lbHYRsCB5OxP43+TPQee5+/6wahQRkXgKs+V1BrDF3be6ew9wA3DxkG0uBq73hHuBJjObFmJNIiJSAsIMrxnA9pTHO5LPBd3GgdvM7AEzu2KkDzGzK8xsjZmtObBfjTQRKR+p338dRzuiLqegwgyv4bpgPYNtVrr7MhJdi+8xs3OG+xB3v9rdV7j7ioktLdlXKyISM6nffw2NDVGXU1BhhtcOYFbK45nArqDbuPvgz1bgRhLdkCIiMoxyG7ARZnitBhaY2TwzqwEuBW4ass1NwGXJUYdnAW3uvtvMxppZI4CZjQUuANaFWKuIiMRIaKMN3b3PzN4LrAIqgWvdfb2ZXZl8/SrgFuBlwBbgGPC25O5TgBstMU1yFfAjd781rFpFRCReQgsvAHe/hURApT53Vcp9B94zzH5bgSVh1iYiUkrKrdvQEvlRGsxsH/BU1HUktQDlPPyxnI+/nI8ddPz5PP797n5hkA3N7Nag25aCkgqvYmJma9x9RdR1RKWcj7+cjx10/OV+/IWiuQ1FRCR2FF4iIhI7Cq/wXB11AREr5+Mv52MHHX+5H39B6JyXiIjEjlpeIiISOwovERGJHYVXFgIssrnIzO4xs24z+0gm+xa7HI899guMBjj+NyUXVn3EzO42syVB9y12OR57OfzuL04e+9rkTO8vDLqvZMHddcvgRmKqqyeA44Aa4GFg8ZBtJgOnA58BPpLJvsV8y+XYk69tA1qiPo6Qj/9soDl5/yLgvjL63Q977GX0u2/g2XEEpwIbS+F3X6w3tbwyl3aRTXdvdffVQG+m+xa5XI69FAQ5/rvd/VDy4b0kVkoItG+Ry+XYS0GQ4z/qybQCxvLs8k5x/90XJYVX5oIsshnGvsUg1/oDLTBaxDI9/rcDv81y32KTy7FDmfzuzezVZrYRuBm4PJN9JTOhTsxbooIsshnGvsUg1/pXuvsuM5sM/M7MNrr7nXmqrRACH7+ZnUfiC3zwvEfZ/O6HOXYok9+9u99IYkWMc4BPAy8Juq9kRi2vzAVZZDOMfYtBTvV7/BcYDXT8ZnYqcA1wsbsfyGTfIpbLsZfN735QMpiPN7OWTPeVYBRemQuyyGYY+xaDrOsvkQVG0x6/mc0Gfgm8xd0fz2TfIpf1sZfR736+JRchNLNlJAZnHAiyr2RO3YYZ8gCLbJrZVGANMA4YMLMPkhhddGS4faM5kszlcuwklomI9QKjQY4f+AQwEfif5LH2ufuKkfaN5ECykMuxUwKLywY8/teSWBm+F+gELkkO4Ij1775YaXooERGJHXUbiohI7Ci8REQkdhReIiISOwovERGJHYWXiIjEjsJLImNm/ckZuAdvkcy2bWa3mFlTHt7nj8mZwx8xs41m9t+jvW+Qz02+54qwahaJK13nJVHqdPelURfh7i/L49u9yd3XJC9G/U/gV8CLUjdIXshquXxunmsWiR21vKSomNn4ZOvlhOTjH5vZO5P3L0u2ah42s+8nn5tkZr8ws9XJ28rk8y9KadE9ZGaNZjbNzO5MPrfOzP4que02M2sxs8+b2btTavmUmX04ef8fk+//iJn9e7rjSM4e/k/AbDNbYmZzzWyDmf0P8CAwK+VzB1/7tpmtN7PbzKxuyJ9LhZl9z8z+Y0jNI+5rZqcn673HzL5oZnGb1UJkRAoviVLdkG7DS9y9DXgv8F0zu5TE+lDfNrOTgH8FXuzuS4APJN/ja8B/ufvpJGY4uCb5/EeA9yRbdn9FYsaDMTgPKwAAArdJREFUvwVWJZ9bAqwdUs8NwCUpj98A/MzMLgAWkJiPbymw3BITr47K3ftJrN20KPnUCcD17n6auz81ZPMFwDfd/STgcPJYBlUBPwQed/d/G+ajRtr3OuBKd38B0J+uXpE4UbehRGnYbkN3/52ZvR74JomQAXgx8HN335/c5mDy+ZcAi5NTDwGMs8Q8encBXzGzHwK/dPcdZrYauNbMqoH/c/fnhJe7P2Rmk81sOjAJOOTuT5vZ+0nMx/dQctMGEoERZFb01BnFn3L3e0fY7smUeh4A5qa89i3gp+7+maD7Js+HNbr73cnnfwS8IkC9IrGglpcUHTOrAE4k0VqaMPg0wy8jUQG8wN2XJm8z3L3d3T8HvAOoA+41s0XJmb7PAXYC3zezy4Z5v58DryPRArsh5bP/M+Uz5rv7dwIcRyVwCrAh+VTHKJt3p9zv57n/sbwbOM/MxmSw73DLcIiUDIWXFKMPkfjCfyPPtpRuB95gZhMBzGww1G4j0c1I8vmlyZ/Hu/uj7v55EhMFLzKzOUCru38b+A6wbJjPvoHErN+vIxFkkJhQ9XIza0i+9wxLrEs1omTN/wlsd/dHMv0DGOI7wC0kujAD9ZYkVzRuN7Ozkk9dmmMNIkVF4SVRGnrO63NmtpBEi+nD7v5nEl1z/5achfszwJ/M7GHgK8n3eD+wIjkw4THgyuTzH0wOyniYRAvut8C5wFoze4jEeaGvDS0o+TmNwE5335187jYS3W73mNmjJEJtcImPW5LdjIN+aGaPkFjyYyx5Wu7d3b9CYqDH95Mt0yDeDlxtZveQaIm15aMWkWKgWeVFSpSZNbj70eT9jwHT3P0DaXYTiQUN2BApXS83s38m8e/8KeCt0ZYjkj9qeYmISOzonJeIiMSOwktERGJH4SUiIrGj8BIRkdhReImISOz8f/qcrYVNTTFLAAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13670,7 +13589,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[279]:</div>
@@ -13706,7 +13625,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13719,7 +13638,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13730,8 +13649,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -13767,7 +13685,23 @@ Name: Poor.Health, dtype: float64
 </div>
 
 </div>
-</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Mining-through-Decision-Tree-Cost-Complexity-Pruning">Data Mining through Decision Tree Cost Complexity Pruning<a class="anchor-link" href="#Data-Mining-through-Decision-Tree-Cost-Complexity-Pruning">&#182;</a></h2><h3 id="Step-2---Build-a-tree-using-cost-complexity-pruning">Step 2 - Build a tree using cost complexity pruning<a class="anchor-link" href="#Step-2---Build-a-tree-using-cost-complexity-pruning">&#182;</a></h3><ol>
+<li><p>Get alphas from the cost complexity pruning path of a decision tree regressor</p>
+</li>
+<li><p>For each value of $\alpha$, find the tree that minimizes cost, $T_\alpha$</p>
+</li>
+<li><p>Then for each $T_\alpha$, find its test set prediction error</p>
+</li>
+<li><p>Choose the $\alpha$ that has lowest test set prediction error</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13780,7 +13714,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[281]:</div>
@@ -13818,7 +13752,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13831,7 +13765,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[282]:</div>
@@ -13851,7 +13785,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13864,7 +13798,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[283]:</div>
@@ -13881,7 +13815,7 @@ Name: Poor.Health, dtype: float64
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13894,7 +13828,7 @@ Name: Poor.Health, dtype: float64
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[284]:</div>
@@ -13931,7 +13865,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13941,7 +13875,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[285]:</div>
@@ -13981,14 +13915,14 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-Mining-through-Decision-Tree-Cost-Complexity-Pruning">Data Mining through Decision Tree Cost Complexity Pruning<a class="anchor-link" href="#Data-Mining-through-Decision-Tree-Cost-Complexity-Pruning">&#182;</a></h2><h3 id="Step-3---See-the-most-relevant-variables">Step 3 - See the most relevant variables<a class="anchor-link" href="#Step-3---See-the-most-relevant-variables">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[286]:</div>
@@ -14033,7 +13967,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14041,8 +13975,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[287]:</div>
@@ -14099,7 +14032,19 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 
 </div>
-</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Use-Regression-Models-to-Quantify-the-Predictive-Power-of-the-Variables">Use Regression Models to Quantify the Predictive Power of the Variables<a class="anchor-link" href="#Use-Regression-Models-to-Quantify-the-Predictive-Power-of-the-Variables">&#182;</a></h2><h3 id="Step-1---Check-for-Colinearity">Step 1 - Check for Colinearity<a class="anchor-link" href="#Step-1---Check-for-Colinearity">&#182;</a></h3><h4 id="Method-2---Implement-VIF-to-Check-for-Colinearity">Method 2 - Implement VIF to Check for Colinearity<a class="anchor-link" href="#Method-2---Implement-VIF-to-Check-for-Colinearity">&#182;</a></h4><ol>
+<li>Run a multiple regression.</li>
+<li>Calculate the VIF factors.</li>
+<li>Inspect the factors for each predictor variable</li>
+</ol>
+<p>If the VIF is between 5-10, multicolinearity is likely present and you should consider dropping the variable.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14109,7 +14054,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[288]:</div>
@@ -14131,7 +14076,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14142,7 +14087,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[289]:</div>
@@ -14158,7 +14103,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14171,7 +14116,7 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[290]:</div>
@@ -14214,14 +14159,242 @@ The best tree&#39;s value of alpha is  4.282870639493723e-06
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Use-regression-models-to-quantify">Use regression models to quantify<a class="anchor-link" href="#Use-regression-models-to-quantify">&#182;</a></h2><h3 id="Step-2---Run-the-multivariate-regression">Step 2 - Run the multivariate regression<a class="anchor-link" href="#Step-2---Run-the-multivariate-regression">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">olsmod1</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;Q(&quot;Poor.Health&quot;) ~ Q(&quot;Median.Household.Income&quot;) + Q(&quot;Life.Expectancy&quot;) + </span><span class="se">\</span>
+<span class="s1">                Q(&quot;Insufficient.Sleep&quot;) + Q(&quot;Over.65&quot;) + Q(&quot;Uninsured&quot;) + Q(&quot;Proportion.of.Smokers&quot;) + </span><span class="se">\</span>
+<span class="s1">                Q(&quot;Unemployment&quot;) + Q(&quot;Excessive.Drinking&quot;) + Q(&quot;Severe.Housing.Problems&quot;) + Q(&quot;Adult.Obesity&quot;) </span><span class="se">\</span>
+<span class="s1">                + Q(&quot;Percent.Females&quot;)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">county_data</span><span class="p">)</span> <span class="c1"># Define the model.</span>
+<span class="n">olsres1</span> <span class="o">=</span> <span class="n">olsmod1</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> <span class="c1"># Fit the model.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">olsres1</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span> <span class="c1"># View the results.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       Q(&#34;Poor.Health&#34;)   R-squared:                       0.832
+Model:                            OLS   Adj. R-squared:                  0.832
+Method:                 Least Squares   F-statistic:                     1221.
+Date:                Tue, 20 Oct 2020   Prob (F-statistic):               0.00
+Time:                        04:00:29   Log-Likelihood:                 6981.8
+No. Observations:                2715   AIC:                        -1.394e+04
+Df Residuals:                    2703   BIC:                        -1.387e+04
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+================================================================================================
+                                   coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                        0.1370      0.021      6.371      0.000       0.095       0.179
+Q(&#34;Median.Household.Income&#34;) -8.773e-07   4.66e-08    -18.828      0.000   -9.69e-07   -7.86e-07
+Q(&#34;Life.Expectancy&#34;)             0.0005      0.000      2.182      0.029    4.62e-05       0.001
+Q(&#34;Insufficient.Sleep&#34;)          0.1729      0.014     12.296      0.000       0.145       0.200
+Q(&#34;Over.65&#34;)                    -0.1636      0.010    -16.298      0.000      -0.183      -0.144
+Q(&#34;Uninsured&#34;)                   0.1841      0.009     20.719      0.000       0.167       0.202
+Q(&#34;Proportion.of.Smokers&#34;)       0.3169      0.019     16.971      0.000       0.280       0.354
+Q(&#34;Unemployment&#34;)                0.4313      0.029     14.909      0.000       0.375       0.488
+Q(&#34;Excessive.Drinking&#34;)         -0.3490      0.016    -22.459      0.000      -0.380      -0.319
+Q(&#34;Severe.Housing.Problems&#34;)     0.1282      0.011     11.635      0.000       0.107       0.150
+Q(&#34;Adult.Obesity&#34;)               0.0228      0.011      2.036      0.042       0.001       0.045
+Q(&#34;Percent.Females&#34;)            -0.0815      0.018     -4.575      0.000      -0.116      -0.047
+==============================================================================
+Omnibus:                      439.948   Durbin-Watson:                   1.252
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1144.484
+Skew:                           0.881   Prob(JB):                    3.01e-249
+Kurtosis:                       5.648   Cond. No.                     4.48e+06
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.48e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">olsmod2</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;Q(&quot;Poor.Health&quot;) ~ Q(&quot;Median.Household.Income&quot;) + Q(&quot;Life.Expectancy&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Insufficient.Sleep&quot;) + Q(&quot;Over.65&quot;) + Q(&quot;Uninsured&quot;) + Q(&quot;Proportion.of.Smokers&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Unemployment&quot;) + Q(&quot;Excessive.Drinking&quot;) + Q(&quot;Severe.Housing.Problems&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Adult.Obesity&quot;) + Q(&quot;Percent.Females&quot;) </span><span class="se">\</span>
+<span class="s1">                          + Q(&quot;Excessive.Drinking&quot;):Q(&quot;Proportion.of.Smokers&quot;)&#39;</span><span class="p">,</span> \
+                          <span class="n">data</span><span class="o">=</span><span class="n">county_data</span><span class="p">)</span> <span class="c1"># Define the model.</span>
+<span class="n">olsres2</span> <span class="o">=</span> <span class="n">olsmod2</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> <span class="c1"># Fit the model.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">olsres2</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span> <span class="c1"># View the results.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       Q(&#34;Poor.Health&#34;)   R-squared:                       0.851
+Model:                            OLS   Adj. R-squared:                  0.851
+Method:                 Least Squares   F-statistic:                     1288.
+Date:                Tue, 20 Oct 2020   Prob (F-statistic):               0.00
+Time:                        04:00:29   Log-Likelihood:                 7142.9
+No. Observations:                2715   AIC:                        -1.426e+04
+Df Residuals:                    2702   BIC:                        -1.418e+04
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+======================================================================================================================
+                                                         coef    std err          t      P&gt;|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------
+Intercept                                             -0.0175      0.022     -0.797      0.425      -0.060       0.026
+Q(&#34;Median.Household.Income&#34;)                       -9.282e-07    4.4e-08    -21.093      0.000   -1.01e-06   -8.42e-07
+Q(&#34;Life.Expectancy&#34;)                                   0.0004      0.000      1.826      0.068   -2.66e-05       0.001
+Q(&#34;Insufficient.Sleep&#34;)                                0.1764      0.013     13.315      0.000       0.150       0.202
+Q(&#34;Over.65&#34;)                                          -0.1668      0.009    -17.620      0.000      -0.185      -0.148
+Q(&#34;Uninsured&#34;)                                         0.2083      0.008     24.566      0.000       0.192       0.225
+Q(&#34;Proportion.of.Smokers&#34;)                             1.2276      0.052     23.431      0.000       1.125       1.330
+Q(&#34;Unemployment&#34;)                                      0.4151      0.027     15.217      0.000       0.362       0.469
+Q(&#34;Excessive.Drinking&#34;)                                0.6749      0.057     11.761      0.000       0.562       0.787
+Q(&#34;Severe.Housing.Problems&#34;)                           0.1234      0.010     11.879      0.000       0.103       0.144
+Q(&#34;Adult.Obesity&#34;)                                     0.0312      0.011      2.948      0.003       0.010       0.052
+Q(&#34;Percent.Females&#34;)                                  -0.0921      0.017     -5.483      0.000      -0.125      -0.059
+Q(&#34;Excessive.Drinking&#34;):Q(&#34;Proportion.of.Smokers&#34;)    -5.7460      0.311    -18.455      0.000      -6.357      -5.135
+==============================================================================
+Omnibus:                      553.441   Durbin-Watson:                   1.318
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1906.956
+Skew:                           0.996   Prob(JB):                         0.00
+Kurtosis:                       6.590   Cond. No.                     5.10e+07
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.1e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[293]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">olsmod3</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;Q(&quot;Poor.Health&quot;) ~ Q(&quot;Median.Household.Income&quot;) + Q(&quot;Life.Expectancy&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Insufficient.Sleep&quot;) + Q(&quot;Over.65&quot;) + Q(&quot;Uninsured&quot;) + Q(&quot;Proportion.of.Smokers&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Unemployment&quot;) + Q(&quot;Excessive.Drinking&quot;) + Q(&quot;Severe.Housing.Problems&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Adult.Obesity&quot;) + Q(&quot;Percent.Females&quot;) </span><span class="se">\</span>
+<span class="s1">                          + Q(&quot;Excessive.Drinking&quot;):Q(&quot;Proportion.of.Smokers&quot;) + </span><span class="se">\</span>
+<span class="s1">                          Q(&quot;Adult.Obesity&quot;):Q(&quot;Percent.Females&quot;)&#39;</span><span class="p">,</span> \
+                          <span class="n">data</span><span class="o">=</span><span class="n">county_data</span><span class="p">)</span> <span class="c1"># Define the model.</span>
+<span class="n">olsres3</span> <span class="o">=</span> <span class="n">olsmod3</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> <span class="c1"># Fit the model.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">olsres3</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span> <span class="c1"># View the results.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       Q(&#34;Poor.Health&#34;)   R-squared:                       0.852
+Model:                            OLS   Adj. R-squared:                  0.851
+Method:                 Least Squares   F-statistic:                     1192.
+Date:                Tue, 20 Oct 2020   Prob (F-statistic):               0.00
+Time:                        04:00:29   Log-Likelihood:                 7147.0
+No. Observations:                2715   AIC:                        -1.427e+04
+Df Residuals:                    2701   BIC:                        -1.418e+04
+Df Model:                          13                                         
+Covariance Type:            nonrobust                                         
+======================================================================================================================
+                                                         coef    std err          t      P&gt;|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------
+Intercept                                              0.1261      0.055      2.289      0.022       0.018       0.234
+Q(&#34;Median.Household.Income&#34;)                       -9.102e-07   4.44e-08    -20.499      0.000   -9.97e-07   -8.23e-07
+Q(&#34;Life.Expectancy&#34;)                                   0.0003      0.000      1.771      0.077   -3.74e-05       0.001
+Q(&#34;Insufficient.Sleep&#34;)                                0.1785      0.013     13.467      0.000       0.153       0.204
+Q(&#34;Over.65&#34;)                                          -0.1635      0.010    -17.163      0.000      -0.182      -0.145
+Q(&#34;Uninsured&#34;)                                         0.2096      0.008     24.719      0.000       0.193       0.226
+Q(&#34;Proportion.of.Smokers&#34;)                             1.2200      0.052     23.286      0.000       1.117       1.323
+Q(&#34;Unemployment&#34;)                                      0.4134      0.027     15.172      0.000       0.360       0.467
+Q(&#34;Excessive.Drinking&#34;)                                0.6687      0.057     11.659      0.000       0.556       0.781
+Q(&#34;Severe.Housing.Problems&#34;)                           0.1244      0.010     11.979      0.000       0.104       0.145
+Q(&#34;Adult.Obesity&#34;)                                    -0.4215      0.160     -2.639      0.008      -0.735      -0.108
+Q(&#34;Percent.Females&#34;)                                  -0.3818      0.103     -3.693      0.000      -0.585      -0.179
+Q(&#34;Excessive.Drinking&#34;):Q(&#34;Proportion.of.Smokers&#34;)    -5.6932      0.312    -18.276      0.000      -6.304      -5.082
+Q(&#34;Adult.Obesity&#34;):Q(&#34;Percent.Females&#34;)                0.9086      0.320      2.840      0.005       0.281       1.536
+==============================================================================
+Omnibus:                      554.834   Durbin-Watson:                   1.323
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1914.976
+Skew:                           0.998   Prob(JB):                         0.00
+Kurtosis:                       6.597   Cond. No.                     6.01e+07
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.01e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[294]:</div>
@@ -14293,7 +14466,7 @@ strong multicollinearity or other numerical problems.
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14316,7 +14489,7 @@ strong multicollinearity or other numerical problems.
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14332,7 +14505,7 @@ strong multicollinearity or other numerical problems.
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14349,74 +14522,12 @@ strong multicollinearity or other numerical problems.
 
 </div>
 </div>
-</div></section></section>
 </div>
-</div>
-
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            transition: "slide",
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        function setScrollingSlide() {
-            var scroll = false
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
-
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
-
-    }
-
-);
-</script>
-
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>
